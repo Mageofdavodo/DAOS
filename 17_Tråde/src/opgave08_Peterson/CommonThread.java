@@ -4,7 +4,7 @@ public class CommonThread extends Thread {
 
 	private Common x;
 	static boolean[] flag = new boolean[2];
-	static volatile int turn = 0;
+	static int turn = 0;
 	private String navn;
 
 	public CommonThread(String navn, Common common) {
