@@ -1,4 +1,4 @@
-package opgave08;
+package opgave11_synchronized;
 
 public class Common {
 
@@ -8,7 +8,7 @@ public class Common {
 
 	private int global;
 
-	void TagerRandomTid(int max) {
+	public synchronized void TagerRandomTid(int max) {
 		for (int i = 0; i < max; i++) {
 			for (int j = 0; j < max; j++) {
 				int tal = 1;
@@ -23,10 +23,10 @@ public class Common {
 		return global;
 	}
 
-	public void opdaterGlobal() {
+	public synchronized void opdaterGlobal() {
 		int temp;
 		temp = global;
-		TagerRandomTid(2);
+		TagerRandomTid(10);
 		global = temp + 1;
 	}
 
