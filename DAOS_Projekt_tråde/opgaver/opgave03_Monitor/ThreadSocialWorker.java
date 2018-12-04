@@ -1,4 +1,4 @@
-package opgave01_buzyWaiting;
+package opgave03_Monitor;
 
 public class ThreadSocialWorker extends Thread {
 
@@ -12,13 +12,10 @@ public class ThreadSocialWorker extends Thread {
 	public void run() {
 		for (int i = 0; i < 100; i++) {
 			while (common.queueLast == common.counter) {
-				try {
-					sleep(2);
-				} catch (InterruptedException e) {
-					// TODO: handle exception
-				}
+
 			}
 			common.yell();
 		}
 	}
+
 }

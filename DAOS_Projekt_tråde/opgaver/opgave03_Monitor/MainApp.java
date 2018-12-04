@@ -1,4 +1,4 @@
-package opgave01_buzyWaiting;
+package opgave03_Monitor;
 
 public class MainApp {
 
