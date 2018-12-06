@@ -3,6 +3,8 @@ package opgave04_2socialWorkers;
 public class Common {
 	public volatile int counter = 0;
 	public volatile int queueLast = 0;
+	// bruges bare til det nummer man er kommet til i hos begge tråde.
+
 	public int count, nextIn, nextOut = 0;
 	public String[] buffer;
 
@@ -21,7 +23,7 @@ public class Common {
 			nextIn = (nextIn + 1) % buffer.length;
 			this.count++;
 		} finally {
-			notify();
+			notifyAll();
 		}
 	}
 
@@ -35,7 +37,7 @@ public class Common {
 			nextOut = (nextOut + 1) % buffer.length;
 			count--;
 		} finally {
-			notify();
+			notifyAll();
 		}
 	}
 

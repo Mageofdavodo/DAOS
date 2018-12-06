@@ -11,13 +11,6 @@ public class ThreadSocialWorker extends Thread {
 	@Override
 	public void run() {
 		for (int i = 0; i < 100; i++) {
-			while (common.queueLast == common.counter) {
-				try {
-					sleep(2);
-				} catch (InterruptedException e) {
-					// TODO: handle exception
-				}
-			}
 			common.yell();
 		}
 	}

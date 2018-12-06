@@ -14,10 +14,8 @@ public class ThreadSocialWorker extends Thread {
 			try {
 				common.yell();
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 	}
-
 }

@@ -23,5 +23,4 @@ public class Common {
 		this.counter++;
 		System.out.println("Nummer: " + counter + "!");
 	}
-
 }

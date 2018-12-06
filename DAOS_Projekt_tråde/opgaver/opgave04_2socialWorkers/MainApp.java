@@ -13,13 +13,5 @@ public class MainApp {
 		office2.start();
 		worker.start();
 		worker2.start();
-		try {
-			worker.join();
-			worker2.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
-
 }

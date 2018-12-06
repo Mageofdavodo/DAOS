@@ -11,11 +11,5 @@ public class MainApp {
 		office1.start();
 		office2.start();
 		worker.start();
-		try {
-			worker.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 	}
-
 }

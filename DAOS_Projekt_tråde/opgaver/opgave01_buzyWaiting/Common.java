@@ -16,6 +16,8 @@ public class Common {
 	}
 
 	public void yell() {
+		while (queueLast == counter)
+			;
 		this.counter++;
 		System.out.println("Nummer: " + counter + "!");
 	}
