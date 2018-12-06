@@ -11,10 +11,12 @@ public class ThreadSocialWorker extends Thread {
 	@Override
 	public void run() {
 		for (int i = 0; i < 100; i++) {
-			while (common.queueLast == common.counter) {
-
+			try {
+				common.yell();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			common.yell();
 		}
 	}
 

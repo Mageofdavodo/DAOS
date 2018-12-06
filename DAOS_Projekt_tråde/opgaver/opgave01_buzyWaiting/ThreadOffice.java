@@ -2,16 +2,13 @@ package opgave01_buzyWaiting;
 
 public class ThreadOffice extends Thread {
 	Common common;
-	String navn;
 	static boolean[] flag = new boolean[2];
 	static int turn = 0;
-	static int id = 0;
-	int myId = 0;
+	private int myId = 0;
 
-	public ThreadOffice(Common common) {
+	public ThreadOffice(int me, Common common) {
 		this.common = common;
-		this.myId = id;
-		id++;
+		this.myId = me;
 	}
 
 	@Override

@@ -10,8 +10,9 @@ public class Common {
 	}
 
 	public void pickNumber() {
+		int tal = queueLast + 1;
+		System.out.println("trækker nummer: " + tal);
 		this.queueLast++;
-		System.out.println("trækker nummer: " + queueLast);
 	}
 
 	public void yell() {

@@ -17,15 +17,10 @@ public class CommonThread extends Thread {
 		int other = id == 0 ? 1 : 0;
 		flag[id] = true;
 		turn = other;
-		while (flag[other] && turn == other) {
-			try {
-				System.out.println("fisk");
-				sleep(5);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
 		for (int j = 0; j < 100; j++) {
+			while (flag[other] && turn == other)
+				;
+
 			x.opdaterGlobal();
 			x.TagerRandomTid(5);
 		}

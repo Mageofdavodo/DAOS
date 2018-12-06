@@ -2,7 +2,7 @@ package opgave04_2socialWorkers;
 
 public class ThreadSocialWorker extends Thread {
 
-	Common common;
+	private Common common;
 
 	public ThreadSocialWorker(Common common) {
 		this.common = common;

@@ -13,9 +13,13 @@ public class Common {
 		int tal = queueLast + 1;
 		System.out.println("trækker nummer: " + tal);
 		this.queueLast++;
+		notify();
 	}
 
-	public void yell() {
+	public synchronized void yell() throws InterruptedException {
+		if (queueLast == counter) {
+			wait();
+		}
 		this.counter++;
 		System.out.println("Nummer: " + counter + "!");
 	}
