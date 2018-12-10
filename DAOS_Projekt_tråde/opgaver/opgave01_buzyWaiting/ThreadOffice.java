@@ -14,9 +14,9 @@ public class ThreadOffice extends Thread {
 	@Override
 	public void run() {
 		int other = myId == 0 ? 1 : 0;
-		flag[myId] = true;
-		turn = other;
 		for (int i = 0; i < 50; i++) {
+			flag[myId] = true;
+			turn = other;
 			while (flag[other] && turn == other) {
 				try {
 					sleep(2);
@@ -25,7 +25,8 @@ public class ThreadOffice extends Thread {
 				}
 			}
 			common.pickNumber();
+			flag[myId] = false;
 		}
-		flag[myId] = false;
+
 	}
 }

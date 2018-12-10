@@ -15,11 +15,7 @@ public class ThreadOffice extends Thread {
 		for (int i = 0; i < 50; i++) {
 			try {
 				common.pickNumber(navn);
-				// sleep(2) bruges til at man kan se de skifter frem og tilbage
-				// - processoren er for hurtig.
-				sleep(2);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

@@ -15,16 +15,15 @@ public class CommonThread extends Thread {
 	public void run() {
 		int id = Integer.parseInt(navn);
 		int other = id == 0 ? 1 : 0;
-		flag[id] = true;
-		turn = other;
 		for (int j = 0; j < 100; j++) {
+			flag[id] = true;
+			turn = other;
 			while (flag[other] && turn == other)
 				;
-
 			x.opdaterGlobal();
 			x.TagerRandomTid(5);
+			flag[id] = false;
 		}
-		flag[id] = false;
 	}
 
 }
